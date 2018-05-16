@@ -1,14 +1,18 @@
 class MockBufferedWriter {
 
-  private var _instance: MockBufferedWriter = null
-  var stringBuilder: StringBuilder = new StringBuilder
+//  private var _instance: MockBufferedWriter = null
+  private val stringBuilder: StringBuilder = new StringBuilder
 
-  def getInstance: MockBufferedWriter = {
-    if (_instance == null) {
-      _instance = new MockBufferedWriter
-    }
+//  def getInstance: MockBufferedWriter = {
+//    if (_instance == null) {
+//      _instance = new MockBufferedWriter
+//    }
+//
+//    _instance
+//  }
 
-    _instance
+  def get: String = {
+    this.stringBuilder.toString
   }
 
   def write(string: String): Unit = {
